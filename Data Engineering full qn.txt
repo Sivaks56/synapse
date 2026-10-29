@@ -1,0 +1,209 @@
+1. What is Data Engineering?
+   Data Engineering is the process of collecting, storing, cleaning, transforming, and moving data so that it
+can be used for reporting, analytics,
+
+2. What does a Data Engineer do?
+   first we extract the data and maintains data pipelines to collect data from different sources,
+   transform and clean it, and store it in reliable systems
+   
+3. What is SQL?
+   sql is a language used to communicate with database we will store retrieve update delete data from tables
+4.What is a Primary Key?
+  Primary key uniquely identify each row in a tables
+5. What is a Foreign Key?
+   Foreign key is used to connect with two tables
+6. What is a JOIN?
+    we will join the data two or more tables based on related column
+7. INNER JOIN vs LEFT JOIN?
+   inner join it will return matching records from both tables
+   left join it will return all records from left table matching records only from right table
+8.WHERE vs HAVING?
+  where it will filter rows before group by
+  having it will filter groups after group by
+9.What is GROUP BY?
+  it will group particular column like department and give each department salary
+10.What is a Subquery?
+   Subquery is a query inside another query
+11.What is a CTE?
+   CTE is a common table expression it will store temporary result we will write complex query this way
+12. What is a Window Function?
+    it is used to perform calculations across related rows without grouping
+
+13.ROW_NUMBER vs RANK vs DENSE_RANK?
+   ROW_NUMBER = it will give serial number each rows
+   Rank = when two rows have the same value, it will give same rank, and the next rank is skipped
+   DENSE_RANK = it can't skip any value it will give all value
+14.What is an Index?
+   index is used to get data faster from database
+15.DELETE vs TRUNCATE vs DROP?
+   DELETE = it will delete particular row based on condition
+   TRUNCATE = it will delete all values
+   Drop  = it will delete full table
+16. what is store procedure?
+     it is write the query inside the statement when the user ask it will give answer
+17. what is trigger 
+    we use trigger to automatically return the information from the table when new employee join
+
+ 18.What is ETL?
+    ETL is used to Extract transform and load data to destination
+19. What is ELT?
+    ELT is used to Extract load and transform it will load data before transform
+20. optimizing query in sql table?
+    1.use index
+    2.Filter early
+    3.verify correct join
+    4.select top or limit
+    5.Avoid select *
+    6.avoid unnecessary subquery
+    7.avoid unnecessary distinct
+    8.check the execution plan 
+21. optimizing query in delta table?
+    1.partitioning
+    2.z ordering
+    3.optimize
+    4.vacuum
+
+22.optimizing query in data bricks?
+    1.partitioning
+    2.z ordering
+    3.optimize
+    4.vacuum
+    5.Liquid clustering ---modern technique
+
+23.Spark job optimization
+   filter data early
+   Avoid unnecessary shuffle
+   use partition properly
+   use Parque or delta
+   select only required column
+   use broadcast join 
+
+23.What is Azure Data Factory?
+    it is cloud based data integration service used to move data from source to destination it is help us to create pipeline also
+24.What is a Pipeline in ADF?
+   pipeline is a collection of activity it will process activity organized way
+25.What is an Activity?
+   it is one individual task inside a pipeline
+   i have used 6 activities like
+   copy activity 
+   lookup activity 
+   for each activity  
+   if activity  
+   script activity 
+   executive pipeline activity 
+26. explain activities ?
+   copy activity -- it is used to move data from source to sink
+   lookup activity -- it will read the configuration table and give the information about table to process
+   for each activity  -- it will take the records from lookup activity and process step by step
+   if activity  -- it will check the table it is full load or increment load
+   script activity -- it is used to execute pipeline
+   executive pipeline activity -- it will use to call another pipeline once finish current pipeline
+27.What is Linked Service?
+   it is a connection bridge between azure and other service 
+28.What is Dataset?
+   we will choose particular file which we want to work 
+   It defines where the data is located and what type of data it is.
+29.What is Integration Runtime?  
+   It is the compute power by adf to connnect move and process the data
+
+25. What are Triggers in ADF?
+    there are 3 types of trigger available like
+    1,schedule Triggers -- we will customise the Triggers which time we want
+    2,tumbling window Triggers  --tumbling window Triggers it will work window based like 10 to 11 it is fixed trigger
+    3,event Triggers --- it will run the pipeline immediately when the specific event happen
+
+26.What is ADF Monitor?
+   it will check the pipeline it is failed or success and it will show error also
+27. How do you orchestrate activities in ADF?
+    it will run the activity based on previous activity status
+28. What is Azure Blob Storage?
+    Blob storage it is a cloud storage used to store large amount of unstructured data
+    like CSV, JSON,Images,Videos,Logs
+29.What is Azure Data Lake?
+   Azure Data Lake it is a cloud storage used to store large amount of structure and semi structured, unstructured for analytical and processing
+30. Blob Storage vs Data Lake?
+    Blob Storage it is general purpose object storage data lake storage is built on blob storage it is useful for big data analytical 
+31.What is a Database?
+   Database is a system used to store and manage data in an organized way
+32.What is Azure SQL Database?
+   Azure SQL Database it is cloud based database used to store structure data in table format and access it using sql
+33.Is Azure SQL Database a storage service?
+   it will store data in table format but it main purpose is manage database not storage like blob storage and lake storage
+34.What is a Data Warehouse?
+   Data Warehouse it will store large amount of structure data for reporting and analytics
+35.Database vs Data Warehouse?
+   Database: it is mainly use for day to day application transaction  
+   Data Warehouse: it is mainly use for analytical and reporting
+36.What is OLTP?
+   online transaction process it handle daily transaction 
+37.What is OLAP?
+   online analytical process it is useful for analyse large amount of data
+38.What is a Fact Table?
+   Fact Table it will store numerical data and measurement details like sales amount, profit, quantity
+39.What is a Dimension Table?
+   Dimension Table it will store descriptive information like customer,product,employee and location
+40.What is a Star Schema?
+   star schema it is a one fact table it will connect multiple Dimension table
+41.What is a Snowflake Schema?
+   Snowflake Schema is similar to star schema but dimension table are further divided into multiple related table
+42.What is Big Data?
+   Big Data means a very large amount of data that is difficult to store, process, and analyze using traditional systems. 
+43.What is Apache Spark?
+   Apache Spark is a distribution process engine used to process large amount of data quickly
+44.What is PySpark?
+   pyspark is a python api for Apache spark
+   It allows us to use Python to perform distributed data processing
+
+45.Spark vs Pandas?
+   pandas it is useful for smaller dataset because it processes data on a single machine
+   spark is useful for large dataset we use  distributed processing across multiple machine
+46.What is a Data Pipeline?
+   Data Pipeline is a process that move and transform data from source to destination
+47.What is Incremental Load?
+   Incremental Load it will load only new records based on watermark value
+
+48.What is Full Load?
+   Full Load it will laod all data from source to destination
+49.Incremental Load vs Full Load?
+   Full Load            Incremental Load
+   Loads all records    Load only new records
+   simple               more complex
+   can be slower        usually faster
+51. What is Data Cleaning?
+    Data Cleaning means we will identify the missing value and fixing incorrect data
+52. What is Data Validation?
+    Data Validation means checking whether data meets expected rules.
+    like salary should not be negative, employee id should be unique
+53. Why is Python used in Data Engineering?
+    python is commonly useful for Data Engineering because it has many libraries like Data processing, automation, Api integration, data cleaning
+ETL, Big data processing
+54.List vs Tuple?
+   List it is mutable and can be changeable
+   Tuple it is immutable can't be changeable
+55. What is a Dictionary?
+    it will store data in key-value pairs
+56.What is an API?
+   api allow two application to communicate with each other
+57.What is JSON?
+   JSON is a simple format used to and exchange data 
+    between application it will store data in key value pair
+58.How do you handle duplicate data?
+   I identify duplicates using business keys or sql function like row_number() over(partition by empid order by date desc)
+
+59.What will you do if an ADF pipeline fails?
+ first i will check the monitor section to identify is there any activity is failed and check the error message after identify the error i will fix the error and rerun the activity
+60.How would you design a data pipeline?
+   First, I identify the data source and destination. Then I create the required
+connections. I extract the data, apply transformations and data-quality checks, and load it into the target
+system. Finally, I schedule and monitor the pipeline
+
+61.How do you handle NULL values?
+   first i identify why the value is null depending on the business requirement i can replace it with a default value and calculate a value
+
+62.How do you improve pipeline performance?
+   I would consider:
+    Incremental loading
+    Parallel processing
+    Avoiding unnecessary transformations
+    Reducing unnecessary data movement
+    Optimizing SQL queries
